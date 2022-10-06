@@ -4,6 +4,7 @@ import HeroBanner from 'components/Homepage/HeroBanner';
 import TopImages from 'components/Homepage/TopImages';
 
 export default function Homepage({ content }) {
+  console.log(content);
   return (
     <>
       <div class="main-page-wrapper dark-bg-one">
