@@ -1,0 +1,13 @@
+{
+         "instance_zuid": "8-ccfdbdbabf-63hhc8",
+         "stage": "https://7z8qfp6r-dev.webengine.zesty.io",
+         "production": "http://cryptodemo.zesty.dev", 
+         "stage_password": "e36863",
+         "src_dir": "",
+         "options": {
+           "skip_config_overwrite": false, 
+           "model_ignore_list": [
+             "6-xyz" 
+           ]
+         }
+     }
