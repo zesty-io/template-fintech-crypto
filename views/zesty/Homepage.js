@@ -1,13 +1,16 @@
-import ZestyTutorial from 'components/ZestyTutorial'
-import React from 'react'
+// Components Imports
+import FeatureSection from 'components/Homepage/FeatureSection';
+import HeroBanner from 'components/Homepage/HeroBanner';
+import TopImages from 'components/Homepage/TopImages';
 
-export default function Homepage({content}){
-
-    return (
-        <> 
-            <h1>{content.title}</h1>
-            <div dangerouslySetInnerHTML={{ __html: content.description }} />
-            <ZestyTutorial contnet={content}></ZestyTutorial>
-        </> 
-    )
+export default function Homepage({ content }) {
+  return (
+    <>
+      <div class="main-page-wrapper dark-bg-one">
+        <TopImages />
+        <HeroBanner />
+        <FeatureSection />
+      </div>
+    </>
+  );
 }

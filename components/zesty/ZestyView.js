@@ -9,9 +9,9 @@ export function ZestyView(props) {
   if (props.content.error) {
     return <Custom404 error={props.content} />;
   }
-  let modelName = props.content.meta.model_alternate_name
+  let modelName = props.content.meta.model_alternate_name;
   // check if the model name start with a numberic value, if so prepend N to match component creation name
-  if(modelName.match(/^[0-9]/) !== null){
+  if (modelName.match(/^[0-9]/) !== null) {
     modelName = 'N' + modelName;
   }
   // dynamically resolves the content models component
@@ -19,18 +19,16 @@ export function ZestyView(props) {
 
   // outside the component near imports
   const initLiveEditor = async (data) => {
-    const { ZestyLiveEditor } = await import("@zesty-io/live-editor")
-    ZestyLiveEditor(data)
-  }
+    const { ZestyLiveEditor } = await import('@zesty-io/live-editor');
+    ZestyLiveEditor(data);
+  };
 
   // inside the component's function just before the return statement
   React.useEffect(() => {
-    if(props.content.zestyProductionMode !== true){
+    if (props.content.zestyProductionMode !== true) {
       // initLiveEditor(props.content)
     }
-  }, [])
-  
-  return (
-    <Component content={props.content} />
-  );
+  }, []);
+
+  return <Component content={props.content} />;
 }
