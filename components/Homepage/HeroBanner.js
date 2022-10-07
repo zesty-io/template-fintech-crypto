@@ -9,7 +9,7 @@ const HeroBanner = ({content}) => {
         <div className="row">
           <div className="col-md-7 wow fadeInLeft">
             <h1 className="hero-heading fw-500 text-white mb-45">
-              {title}
+              <div dangerouslySetInnerHTML={{ __html: title }}/>
             </h1>
             <p className="text-lg text-white opacity-75 mb-65 lg-mb-50 pe-lg-5">
               Already have a website? Try our hosting to alive it with

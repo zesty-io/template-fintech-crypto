@@ -1,7 +1,12 @@
+import { SignUpStep } from "views/zesty";
+
 const FeatureSection = (content) => {
   const howItWorksMainText = content.content.how_it_works_main_text;
   const howItWorksDescription = content.content.how_it_works_description;
   const howItWorksContent = content.content.how_it_works_content;
+
+  const signUpSteps = content.content.sign_up_steps;
+  console.log(signUpSteps);
 
   return (
     <>
@@ -59,9 +64,9 @@ const FeatureSection = (content) => {
                       className="lazy-img"
                     />
                   </div>
-                  <h4 className="text-white mt-20 mb-10">Create Account</h4>
+                  <h4 className="text-white mt-20 mb-10">{signUpSteps.data[0].step_name}</h4>
                   <p className="fs-18">
-                    Learn content by interacting quis expert lesson a video.
+                    {signUpSteps.data[0].step_description}
                   </p>
                   <div className="arrow d-flex align-items-center justify-content-center rounded-circle position-absolute">
                     <i className="bi bi-chevron-right"></i>
@@ -78,9 +83,9 @@ const FeatureSection = (content) => {
                       className="lazy-img"
                     />
                   </div>
-                  <h4 className="text-white mt-20 mb-10">Link Your Bank</h4>
+                  <h4 className="text-white mt-20 mb-10">{signUpSteps.data[1].step_name}</h4>
                   <p className="fs-18">
-                    Practice what you realistic SAT test questions.
+                    {signUpSteps.data[1].step_description}
                   </p>
                   <div className="arrow d-flex align-items-center justify-content-center rounded-circle position-absolute">
                     <i className="bi bi-chevron-right"></i>
@@ -97,9 +102,9 @@ const FeatureSection = (content) => {
                       className="lazy-img"
                     />
                   </div>
-                  <h4 className="text-white mt-20 mb-10">Start Buy & Sell</h4>
+                  <h4 className="text-white mt-20 mb-10">{signUpSteps.data[2].step_name}</h4>
                   <p className="fs-18">
-                    Review your practice and learn how to improve.
+                    {signUpSteps.data[2].step_description}
                   </p>
                 </div>
               </div>

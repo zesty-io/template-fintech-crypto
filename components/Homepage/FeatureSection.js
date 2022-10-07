@@ -150,7 +150,7 @@ const FeatureSection = (content) => {
             <div className="card-style-twelve text-center position-relative mt-40 wow fadeInUp">
               <div className="icon d-flex align-items-center justify-content-center">
                 <img
-                  src="images/lazy.svg"
+                  src={mainContext1__img}
                   data-src="images/icon/icon_78.png"
                   alt=""
                   className="lazy-img"
@@ -162,7 +162,7 @@ const FeatureSection = (content) => {
               </p>
               <a href="#" className="arrow tran3s">
                 <img
-                  src={mainContext1__img}
+                  src="images/lazy.svg"
                   data-src="images/icon/icon_80.svg"
                   alt=""
                   className="lazy-img"
@@ -177,7 +177,7 @@ const FeatureSection = (content) => {
             >
               <div className="icon d-flex align-items-center justify-content-center">
                 <img
-                  src="images/lazy.svg"
+                  src={mainContext2__img}
                   data-src="images/icon/icon_79.png"
                   alt=""
                   className="lazy-img"
@@ -189,7 +189,7 @@ const FeatureSection = (content) => {
               </p>
               <a href="#" className="arrow tran3s">
                 <img
-                  src={mainContext2__img}
+                  src="images/lazy.svg"
                   data-src="images/icon/icon_80.svg"
                   alt=""
                   className="lazy-img"
@@ -204,7 +204,7 @@ const FeatureSection = (content) => {
             >
               <div className="icon d-flex align-items-center justify-content-center">
                 <img
-                  src="images/lazy.svg"
+                  src={mainContext3__img}
                   data-src="images/icon/icon_81.png"
                   alt=""
                   className="lazy-img"
@@ -216,7 +216,7 @@ const FeatureSection = (content) => {
               </p>
               <a href="#" className="arrow tran3s">
                 <img
-                  src={mainContext3__img}
+                  src="images/lazy.svg"
                   data-src="images/icon/icon_80.svg"
                   alt=""
                   className="lazy-img"
