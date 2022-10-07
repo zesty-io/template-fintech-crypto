@@ -18,7 +18,7 @@ export default function Homepage({ content }) {
         <HeroBanner content={content} />
         <FeatureSection content={content} />
         <FeatureSection2 content={content} />
-        <FeatureSection3 />
+        <FeatureSection3 content={content}/>
         <FeedbackSection />
         <FeatureSection4 />
         <BlogSection />

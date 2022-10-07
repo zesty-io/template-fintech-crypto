@@ -6,8 +6,7 @@
 
 function Footer() {
   return <>
-
-<div className="footer-style-eight theme-basic-footer">
+		<div className="footer-style-eight theme-basic-footer">
 				<div className="top-footer zn2 position-relative">
 					<img src="images/lazy.svg" data-src="images/shape/shape_107.svg" alt="" className="lazy-img shapes shape-one"/>
 					<div className="container">
@@ -82,7 +81,6 @@ function Footer() {
 					</div>
 				</div> 
 			</div>
-  
   </>;
 }
 

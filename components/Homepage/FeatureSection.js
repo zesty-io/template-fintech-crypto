@@ -11,6 +11,10 @@ const FeatureSection = (content) => {
   const mainContext3__description = content.content.homepage_tiles.data[2].description;
   const mainContext3__img = content.content.homepage_tiles.data[2].main_image.data[0].url;
 
+  const zuid = content.content.homepage_tiles.data[0].main_image.data[0].zuid;
+
+  console.log(zuid);
+
   return (
     <div className="fancy-feature-twentySix position-relative zn2 pt-150 lg-pt-80">
       <div className="wrapper-xl m-auto wow fadeInUp">

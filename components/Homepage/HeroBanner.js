@@ -1,7 +1,7 @@
 const HeroBanner = ({ content }) => {
-  const title = content.title;
-  const YtLink = content.youtube_video_link;
-  const bannerImage = content.image.data[0].url;
+  const title = content.title || '';
+  const YtLink = content.youtube_video_link || '';
+  const bannerImage = content.image.data[0].url || '';
 
   return (
     <div className="hero-banner-eight position-relative pt-225 md-pt-150">

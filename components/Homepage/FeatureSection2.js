@@ -1,12 +1,12 @@
 import MuiMarkdown from 'mui-markdown';
 
 const FeatureSection = (content) => {
-  const howItWorksMainText = content.content.how_it_works_main_text;
-  const howItWorksDescription = content.content.how_it_works_description;
-  const howItWorksContent = content.content.how_it_works_content;
+  const howItWorksMainText = content.content.how_it_works_main_text || '';
+  const howItWorksDescription = content.content.how_it_works_description || '';
+  const howItWorksContent = content.content.how_it_works_content || '';
+  const signUpSteps = content.content.sign_up_steps || '';
 
-  const signUpSteps = content.content.sign_up_steps;
-  console.log(signUpSteps);
+
 
   return (
     <>
@@ -76,10 +76,10 @@ const FeatureSection = (content) => {
                     />
                   </div>
                   <h4 className="text-white mt-20 mb-10">
-                    {signUpSteps.data[0].step_name}
+                    {signUpSteps.data[0].step_name || ''}
                   </h4>
                   <p className="fs-18">
-                    {signUpSteps.data[0].step_description}
+                    {signUpSteps.data[0].step_description || ''}
                   </p>
                   <div className="arrow d-flex align-items-center justify-content-center rounded-circle position-absolute">
                     <i className="bi bi-chevron-right"></i>
@@ -97,10 +97,10 @@ const FeatureSection = (content) => {
                     />
                   </div>
                   <h4 className="text-white mt-20 mb-10">
-                    {signUpSteps.data[1].step_name}
+                    {signUpSteps.data[1].step_name || ''}
                   </h4>
                   <p className="fs-18">
-                    {signUpSteps.data[1].step_description}
+                    {signUpSteps.data[1].step_description || ''}
                   </p>
                   <div className="arrow d-flex align-items-center justify-content-center rounded-circle position-absolute">
                     <i className="bi bi-chevron-right"></i>
@@ -118,10 +118,10 @@ const FeatureSection = (content) => {
                     />
                   </div>
                   <h4 className="text-white mt-20 mb-10">
-                    {signUpSteps.data[2].step_name}
+                    {signUpSteps.data[2].step_name || ''}
                   </h4>
                   <p className="fs-18">
-                    {signUpSteps.data[2].step_description}
+                    {signUpSteps.data[2].step_description || ''}
                   </p>
                 </div>
               </div>

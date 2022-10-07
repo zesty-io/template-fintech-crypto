@@ -1,4 +1,8 @@
-const FeatureSection3 = () => {
+const FeatureSection3 = (content) => {
+    const whyChoseUsValueProps = content.content.why_choose_us_value_props || '';
+    const statisticHighlights = content.content.statistic_highlights || '';
+
+    
   return <>
     
     <div className="fancy-feature-twentyEight position-relative zn2 mt-225 lg-mt-120">
@@ -11,9 +15,9 @@ const FeatureSection3 = () => {
                             <h2 className="main-title text-white">Why <span>Choose</span> us for your business.</h2>
                         </div> 
                         <ul className="style-none list-item">
-                            <li>World best technology data and trsuted by 10m+ users.</li>
-                            <li>We provide best price more than other market</li>
-                            <li>We’v expert to support you 24 hours in week.</li>
+                            <li>{whyChoseUsValueProps.data[0].value_proposition || ''}</li>
+                            <li>{whyChoseUsValueProps.data[1].value_proposition || ''}</li>
+                            <li>{whyChoseUsValueProps.data[2].value_proposition || ''}</li>
                         </ul>
                     </div> 
                 </div>
@@ -30,20 +34,20 @@ const FeatureSection3 = () => {
                 <div className="row justify-content-center">
                     <div className="col-md-4 col-sm-6">
                         <div className="counter-block-four text-center mt-40 wow fadeInUp">
-                            <div className="main-count fw-500">$<span className="counter">1</span>b+</div>
-                            <p className="fs-18 m0">Cumulative trading volume <br/>since inception</p>
+                            <div className="main-count fw-500"><span className="counter">{statisticHighlights.data[0].main_statistic || ''}</span></div>
+                            <p className="fs-18 m0">{statisticHighlights.data[0].statistic_description || ''}</p>
                         </div> 
                     </div>
                     <div className="col-md-4 col-sm-6">
                         <div className="counter-block-four text-center mt-40 wow fadeInUp" data-wow-delay="0.2s">
-                            <div className="main-count fw-500"><span className="counter">10</span></div>
-                            <p className="fs-18 m0">Million Insurance Coverage.</p>
+                            <div className="main-count fw-500"><span className="counter">{statisticHighlights.data[1].main_statistic || ''}</span></div>
+                            <p className="fs-18 m0">{statisticHighlights.data[0].statistic_description || ''}</p>
                         </div> 
                     </div>
                     <div className="col-md-4 col-sm-6">
                         <div className="counter-block-four text-center mt-40 wow fadeInUp" data-wow-delay="0.3s">
-                            <div className="main-count fw-500"><span className="counter">120</span>+</div>
-                            <p className="fs-18 m0">Country & Regions</p>
+                            <div className="main-count fw-500"><span className="counter">{statisticHighlights.data[2].main_statistic || ''}</span></div>
+                            <p className="fs-18 m0">{statisticHighlights.data[2].statistic_description || ''}</p>
                         </div>
                     </div>
                 </div>
