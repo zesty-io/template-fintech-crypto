@@ -1,15 +1,15 @@
-const HeroBanner = ({content}) => {
+const HeroBanner = ({ content }) => {
   const title = content.title;
-  const YtLink = content.youtube_video_link
-  const bannerImage = content.image.data[0].url
-  
+  const YtLink = content.youtube_video_link;
+  const bannerImage = content.image.data[0].url;
+
   return (
     <div className="hero-banner-eight position-relative pt-225 md-pt-150">
       <div className="container">
         <div className="row">
           <div className="col-md-7 wow fadeInLeft">
             <h1 className="hero-heading fw-500 text-white mb-45">
-              <div dangerouslySetInnerHTML={{ __html: title }}/>
+              <div dangerouslySetInnerHTML={{ __html: title }} />
             </h1>
             <p className="text-lg text-white opacity-75 mb-65 lg-mb-50 pe-lg-5">
               Already have a website? Try our hosting to alive it with
@@ -20,7 +20,7 @@ const HeroBanner = ({content}) => {
                 className="fancybox video-icon tran3s mb-25 d-flex align-items-center order-sm-last"
                 data-fancybox=""
                 href={YtLink}
-                target="_blank" 
+                target="_blank"
               >
                 <span className="icon d-block">
                   <i className="bi bi-play"></i>
@@ -52,7 +52,6 @@ const HeroBanner = ({content}) => {
       </div>
       <div className="illustration-holder wow fadeInRight">
         <img
-          
           src={bannerImage}
           data-src="images/assets/ils_08.png"
           alt=""

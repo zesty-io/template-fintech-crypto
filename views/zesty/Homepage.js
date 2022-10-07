@@ -15,9 +15,9 @@ export default function Homepage({ content }) {
     <>
       <div className="main-page-wrapper dark-bg-one">
         <TopImages />
-        <HeroBanner content={content}/>
-        <FeatureSection content={content}/>
-        <FeatureSection2 content = {content} />
+        <HeroBanner content={content} />
+        <FeatureSection content={content} />
+        <FeatureSection2 content={content} />
         <FeatureSection3 />
         <FeedbackSection />
         <FeatureSection4 />

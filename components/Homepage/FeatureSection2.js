@@ -1,4 +1,4 @@
-import { SignUpStep } from "views/zesty";
+import MuiMarkdown from 'mui-markdown';
 
 const FeatureSection = (content) => {
   const howItWorksMainText = content.content.how_it_works_main_text;
@@ -16,23 +16,34 @@ const FeatureSection = (content) => {
             <div className="col-lg-6 ms-auto order-lg-last">
               <div className="block-style-three ps-xxl-5 wow fadeInRight">
                 <div className="title-style-nine">
-                  <div className="sc-title" dangerouslySetInnerHTML={{ __html: howItWorksMainText }} >{}</div>
+                  <div
+                    className="sc-title"
+                    dangerouslySetInnerHTML={{ __html: howItWorksMainText }}
+                  ></div>
                   <h2 className="main-title text-white">
                     Buy <span>Crypto</span> fast & Instantly.
                   </h2>
                 </div>
-                <div dangerouslySetInnerHTML={{__html: howItWorksContent}}>
-
-                </div>
-                <p className="text-lg text-white opacity-75 pt-20 pb-30 lg-pb-20">
-                  Link your bank account and have your bitcoin in minutes. It’s
-                  super easy & fast.
-                </p>
-                <ul className="style-none list-item fs-18 text-white opacity-75">
-                  <li>Global Exchange Rates</li>
-                  <li>Make payments with Bank Transfer</li>
-                  <li>Instant Transaction</li>
-                </ul>
+                <MuiMarkdown
+                  overrides={{
+                    p: {
+                      component: 'p',
+                      props: {
+                        className:
+                          'text-lg text-white opacity-75 pt-20 pb-30 lg-pb-20',
+                      },
+                    },
+                    ul: {
+                      component: 'ul',
+                      props: {
+                        className:
+                          'style-none list-item fs-18 text-white opacity-75',
+                      },
+                    },
+                  }}
+                >
+                  {howItWorksContent}
+                </MuiMarkdown>
                 <a href="#" className="btn-sixteen fw-500 border7 tran3s mt-45">
                   Start Trading
                 </a>
@@ -64,7 +75,9 @@ const FeatureSection = (content) => {
                       className="lazy-img"
                     />
                   </div>
-                  <h4 className="text-white mt-20 mb-10">{signUpSteps.data[0].step_name}</h4>
+                  <h4 className="text-white mt-20 mb-10">
+                    {signUpSteps.data[0].step_name}
+                  </h4>
                   <p className="fs-18">
                     {signUpSteps.data[0].step_description}
                   </p>
@@ -83,7 +96,9 @@ const FeatureSection = (content) => {
                       className="lazy-img"
                     />
                   </div>
-                  <h4 className="text-white mt-20 mb-10">{signUpSteps.data[1].step_name}</h4>
+                  <h4 className="text-white mt-20 mb-10">
+                    {signUpSteps.data[1].step_name}
+                  </h4>
                   <p className="fs-18">
                     {signUpSteps.data[1].step_description}
                   </p>
@@ -102,7 +117,9 @@ const FeatureSection = (content) => {
                       className="lazy-img"
                     />
                   </div>
-                  <h4 className="text-white mt-20 mb-10">{signUpSteps.data[2].step_name}</h4>
+                  <h4 className="text-white mt-20 mb-10">
+                    {signUpSteps.data[2].step_name}
+                  </h4>
                   <p className="fs-18">
                     {signUpSteps.data[2].step_description}
                   </p>
