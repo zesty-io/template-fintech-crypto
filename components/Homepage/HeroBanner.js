@@ -1,11 +1,15 @@
-const HeroBanner = () => {
+const HeroBanner = ({content}) => {
+  const title = content.title;
+  const YtLink = content.youtube_video_link
+  const bannerImage = content.image.data[0].url
+  
   return (
     <div className="hero-banner-eight position-relative pt-225 md-pt-150">
       <div className="container">
         <div className="row">
           <div className="col-md-7 wow fadeInLeft">
             <h1 className="hero-heading fw-500 text-white mb-45">
-              Trsuted & Secure <span>Crypto</span> Market Exchange.
+              {title}
             </h1>
             <p className="text-lg text-white opacity-75 mb-65 lg-mb-50 pe-lg-5">
               Already have a website? Try our hosting to alive it with
@@ -15,7 +19,8 @@ const HeroBanner = () => {
               <a
                 className="fancybox video-icon tran3s mb-25 d-flex align-items-center order-sm-last"
                 data-fancybox=""
-                href="https://www.youtube.com/embed/aXFSJTjVjw0"
+                href={YtLink}
+                target="_blank" 
               >
                 <span className="icon d-block">
                   <i className="bi bi-play"></i>
@@ -33,7 +38,7 @@ const HeroBanner = () => {
                 href="#"
                 className="btn-sixteen fw-500 tran3s mb-25 me-4 order-sm-first"
               >
-                Start Trading
+                {content.cta_button_text}
               </a>
             </div>
             <h2 className="fw-500 text-white mt-60 lg-mt-30 mb-5">
@@ -47,7 +52,8 @@ const HeroBanner = () => {
       </div>
       <div className="illustration-holder wow fadeInRight">
         <img
-          src="images/lazy.svg"
+          
+          src={bannerImage}
           data-src="images/assets/ils_08.png"
           alt=""
           className="main-illustration lazy-img"

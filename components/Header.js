@@ -62,7 +62,7 @@ function Header() {
                       data-bs-auto-close="outside"
                       aria-expanded="false"
                     >
-                      Home
+                      Product
                     </a>
                     <ul className="dropdown-menu">
                       <li>
@@ -284,7 +284,7 @@ function Header() {
                       data-bs-auto-close="outside"
                       aria-expanded="false"
                     >
-                      Pages
+                      Blog
                     </a>
                     <ul className="dropdown-menu">
                       <li>
@@ -554,74 +554,7 @@ function Header() {
                       </li>
                     </ul>
                   </li>
-                  <li className="nav-item dropdown">
-                    <a
-                      className="nav-link dropdown-toggle"
-                      href="#"
-                      role="button"
-                      data-bs-toggle="dropdown"
-                      data-bs-auto-close="outside"
-                      aria-expanded="false"
-                    >
-                      Blog
-                    </a>
-                    <ul className="dropdown-menu">
-                      <li>
-                        <a href="blog-v1.html" className="dropdown-item">
-                          <span>List With sidebar</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="blog-v2.html" className="dropdown-item">
-                          <span>Grid With sidebar</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="blog-v3.html" className="dropdown-item">
-                          <span>Grid Layout</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="blog-details.html" className="dropdown-item">
-                          <span>Blog Details</span>
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li className="nav-item dropdown">
-                    <a
-                      className="nav-link dropdown-toggle"
-                      href="#"
-                      role="button"
-                      data-bs-toggle="dropdown"
-                      data-bs-auto-close="outside"
-                      aria-expanded="false"
-                    >
-                      Contact
-                    </a>
-                    <ul className="dropdown-menu">
-                      <li>
-                        <a href="contact-us.html" className="dropdown-item">
-                          <span>Contact- insurance</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="contact-us-v2.html" className="dropdown-item">
-                          <span>Contact- Agency</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="contact-us-v3.html" className="dropdown-item">
-                          <span>Contact- Web Hosting</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="contact-us-v4.html" className="dropdown-item">
-                          <span>Contact- L.Generation</span>
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
+                  
                 </ul>
 
                 <div className="mobile-content d-block d-lg-none">

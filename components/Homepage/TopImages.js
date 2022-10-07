@@ -4,42 +4,42 @@ const TopImages = () => {
       <img
         src="images/shape/shape_101.svg"
         alt=""
-        class="lazy-img shapes oval-shape-one"
+        className="lazy-img shapes oval-shape-one"
       />
       <img
         src="images/shape/shape_102.svg"
         alt=""
-        class="lazy-img shapes oval-shape-two"
+        className="lazy-img shapes oval-shape-two"
       />
       <img
         src="images/shape/shape_108.svg"
         alt=""
-        class="lazy-img shapes oval-shape-three"
+        className="lazy-img shapes oval-shape-three"
       />
       <img
         src="images/shape/shape_109.svg"
         alt=""
-        class="lazy-img shapes oval-shape-four"
+        className="lazy-img shapes oval-shape-four"
       />
       <img
         src="images/shape/shape_110.svg"
         alt=""
-        class="lazy-img shapes oval-shape-five"
+        className="lazy-img shapes oval-shape-five"
       />
       <img
         src="images/shape/shape_111.svg"
         alt=""
-        class="lazy-img shapes oval-shape-six"
+        className="lazy-img shapes oval-shape-six"
       />
       <img
         src="images/shape/shape_112.svg"
         alt=""
-        class="lazy-img shapes oval-shape-seven"
+        className="lazy-img shapes oval-shape-seven"
       />
       <img
         src="images/shape/shape_113.svg"
         alt=""
-        class="lazy-img shapes oval-shape-eight"
+        className="lazy-img shapes oval-shape-eight"
       />
     </>
   );

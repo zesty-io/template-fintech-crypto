@@ -1,4 +1,16 @@
-const FeatureSection = () => {
+const FeatureSection = (content) => {
+  const mainContext1 = content.content.homepage_tiles.data[0].main_text;
+  const mainContext1__description = content.content.homepage_tiles.data[0].description;
+  const mainContext1__img = content.content.homepage_tiles.data[0].main_image.data[0].url;
+
+  const mainContext2 = content.content.homepage_tiles.data[1].main_text;
+  const mainContext2__description = content.content.homepage_tiles.data[1].description;
+  const mainContext2__img = content.content.homepage_tiles.data[1].main_image.data[0].url;
+
+  const mainContext3 = content.content.homepage_tiles.data[2].main_text;
+  const mainContext3__description = content.content.homepage_tiles.data[2].description;
+  const mainContext3__img = content.content.homepage_tiles.data[2].main_image.data[0].url;
+
   return (
     <div className="fancy-feature-twentySix position-relative zn2 pt-150 lg-pt-80">
       <div className="wrapper-xl m-auto wow fadeInUp">
@@ -144,13 +156,13 @@ const FeatureSection = () => {
                   className="lazy-img"
                 />
               </div>
-              <h4 className="text-white mb-10 mt-25">Best Exchange Rate</h4>
+              <h4 className="text-white mb-10 mt-25">{mainContext1}</h4>
               <p className="text-white opacity-75 mb-25">
-                Convert data noise intelligent for quis lorem.
+                {mainContext1__description}
               </p>
               <a href="#" className="arrow tran3s">
                 <img
-                  src="images/lazy.svg"
+                  src={mainContext1__img}
                   data-src="images/icon/icon_80.svg"
                   alt=""
                   className="lazy-img"
@@ -171,13 +183,13 @@ const FeatureSection = () => {
                   className="lazy-img"
                 />
               </div>
-              <h4 className="text-white mb-10 mt-25">Protected by insurance</h4>
+              <h4 className="text-white mb-10 mt-25">{mainContext2}</h4>
               <p className="text-white opacity-75 mb-25">
-                Convert data noise intelligent for quis lorem.
+               {mainContext2__description}
               </p>
               <a href="#" className="arrow tran3s">
                 <img
-                  src="images/lazy.svg"
+                  src={mainContext2__img}
                   data-src="images/icon/icon_80.svg"
                   alt=""
                   className="lazy-img"
@@ -198,13 +210,13 @@ const FeatureSection = () => {
                   className="lazy-img"
                 />
               </div>
-              <h4 className="text-white mb-10 mt-25">Secure storage</h4>
+              <h4 className="text-white mb-10 mt-25">{mainContext3}</h4>
               <p className="text-white opacity-75 mb-25">
-                Convert data noise intelligent for quis lorem.
+                {mainContext3__description}
               </p>
               <a href="#" className="arrow tran3s">
                 <img
-                  src="images/lazy.svg"
+                  src={mainContext3__img}
                   data-src="images/icon/icon_80.svg"
                   alt=""
                   className="lazy-img"

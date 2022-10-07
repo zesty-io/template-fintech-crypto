@@ -5,7 +5,85 @@
  */
 
 function Footer() {
-  return <h1>Footer</h1>;
+  return <>
+
+<div className="footer-style-eight theme-basic-footer">
+				<div className="top-footer zn2 position-relative">
+					<img src="images/lazy.svg" data-src="images/shape/shape_107.svg" alt="" className="lazy-img shapes shape-one"/>
+					<div className="container">
+						<div className="inner-wrapper m-auto">
+							<div className="row">
+								<div className="col-lg-4 form-widget mb-30">
+									<div className="logo"><a href="index.html"><img src="images/logo/logo_05.png" alt="" width="95"/></a></div>
+									<h6 className="pt-40 pb-10 text-white fw-normal">Join our newsletter</h6>
+									<form action="#" className="position-relative me-xxl-5">
+										<input type="email" placeholder="Enter your email"/>
+										<button className="fw-500 position-absolute">Subscribe</button>
+									</form>
+									<div className="fs-14 mt-10 text-white opacity-50">We only send interesting and relevant emails.</div>
+								</div>
+								<div className="col-lg-2 col-sm-4 ms-auto mb-30">
+									<h5 className="footer-title text-white fw-500">Links</h5>
+									<ul className="footer-nav-link style-none">
+										<li><a href="index.html">Home</a></li>
+										<li><a href="pricing.html">Pricing</a></li>
+										<li><a href="about-v1.html">About us</a></li>
+										<li><a href="blog-v1.html">Careers</a></li>
+										<li><a href="service-v1.html">Features</a></li>
+										<li><a href="blog-v1.html">Demo the product</a></li>
+									</ul>
+								</div>
+								<div className="col-lg-3 col-sm-4 mb-30">
+									<h5 className="footer-title text-white fw-500">Legal</h5>
+									<ul className="footer-nav-link style-none">
+										<li><a href="faq.html">Terms of use</a></li>
+										<li><a href="faq.html">Terms & conditions</a></li>
+										<li><a href="faq.html">Privacy policy</a></li>
+										<li><a href="faq.html">Cookie policy</a></li>
+									</ul>
+								</div>
+								<div className="col-xl-2 col-lg-3 col-sm-4 mb-30">
+									<h5 className="footer-title text-white fw-500">Products</h5>
+									<ul className="footer-nav-link style-none">
+										<li><a href="faq.html">Take the tour</a></li>
+										<li><a href="faq.html">Live chat</a></li>
+										<li><a href="faq.html">Self-service</a></li>
+										<li><a href="faq.html">Social</a></li>
+										<li><a href="faq.html">Collaboration</a></li>
+										<li><a href="faq.html">Jano Reviews</a></li>
+									</ul>
+								</div>
+							</div>
+						</div> 
+					</div>
+				</div> 
+				<div className="bottom-footer position-relative">
+					<div className="container">
+						<div className="inner-wrapper m-auto">
+							<div className="row">
+								<div className="col-lg-4 order-lg-0 mb-15">
+									<ul className="d-flex justify-content-center justify-content-lg-start footer-nav style-none">
+										<li><a href="faq.html">Privacy &amp; Terms.</a></li>
+										<li><a href="contact-us.html">Contact Us</a></li>
+									</ul>
+								</div>
+								<div className="col-lg-4 order-lg-2 mb-15">
+									<ul className="d-flex justify-content-center justify-content-lg-end social-icon style-none">
+										<li><a href="#"><i className="fab fa-facebook-f"></i></a></li>
+										<li><a href="#"><i className="fab fa-twitter"></i></a></li>
+										<li><a href="#"><i className="fab fa-linkedin-in"></i></a></li>
+									</ul>
+								</div>
+								<div className="col-lg-4 order-lg-1 mb-15">
+									<p className="copyright text-center m0">Copyright @2022 janu inc.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> 
+			</div>
+  
+  </>;
 }
 
 export default Footer;
