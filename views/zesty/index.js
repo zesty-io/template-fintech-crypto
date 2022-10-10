@@ -25,9 +25,10 @@ import ServicesCard from './ServicesCard';
 import ContactPage from './ContactPage';
 import NavBarItem from './NavBarItem';
 import NavBar from './NavBar';
-import Footer from './Footer';
 import Icon from './Icon';
+import FooterItem from './FooterItem';
+import Footer from './Footer';
  
  export {
-   Clipping, Widget, Homepage, SimplePage, SidebarContactForm, Blog, Article, HomepageTile, Category, Author, Tag, CtaCard, SignUpStep, ValueProp, CompanyStatistic, ServicesPage, Testimonial, Faq, SocialMedia, ServicesCard, ContactPage, NavBarItem, NavBar, Footer, Icon
+   Clipping, Widget, Homepage, SimplePage, SidebarContactForm, Blog, Article, HomepageTile, Category, Author, Tag, CtaCard, SignUpStep, ValueProp, CompanyStatistic, ServicesPage, Testimonial, Faq, SocialMedia, ServicesCard, ContactPage, NavBarItem, NavBar, Icon, FooterItem, Footer
  }
