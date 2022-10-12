@@ -2,8 +2,9 @@ import ArticleBlogSection from 'components/Blog/ArticleBlogSection';
 
 const BlogSection = ({ content }) => {
   // const article1 = content.content.top_articles.data[0];
-  const { articles } = content;
-  console.log(articles);
+  const { blog_items } = content;
+  console.log(blog_items);
+  
   return (
     <>
       <div className="blog-section-five mt-70 lg-mt-30">
@@ -12,7 +13,7 @@ const BlogSection = ({ content }) => {
             <div className="row gx-xl-5">
               <div className="col-lg-8">
                 <div className="blog-meta-wrapper pe-xxl-5">
-                  <ArticleBlogSection articles={articles.data} />
+                  <ArticleBlogSection blogItems={blog_items.data} />
                 </div>
                 <div className="page-pagination-one pt-30">
                   <ul className="d-flex align-items-center style-none">

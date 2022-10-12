@@ -1,10 +1,10 @@
 // const fetch = require('node-fetch');
-const configs = require('../../zesty.config.json');
-import { React, useState, useEffect } from 'react';
+// const configs = require('../../zesty.config.json');
+// import { React, useState, useEffect } from 'react';
 
-const stageURL = configs.stage;
 
-const ArticleBlogSection = ({ articles }) => {
+
+const ArticleBlogSection = ({ blogItems }) => {
   //   const [articles, setArticles] = useState([]);
   //   async function fetchData(url) {
   //     console.log('fetching data from: ', url);
@@ -20,15 +20,15 @@ const ArticleBlogSection = ({ articles }) => {
 
   return (
     <>
-      {articles.map((article, index) => {
+      {blogItems.map((blogs, index) => {
         return (
           <div className="row" key={index}>
             <div className="col-md-6">
               <article className="blog-meta-three mb-60 lg-mb-40 wow fadeInUp">
                 <figure className="post-img m0">
-                  <a href={article.meta.web.uri} className="w-100 d-block">
+                  <a href="#" className="w-100 d-block">
                     <img
-                      src={article.image.data[0].url}
+                      src={blogs.blog_image.data[0].url}
                       data-src="images/blog/blog_img_20.jpg"
                       alt=""
                       className="lazy-img w-100 tran4s"
@@ -37,19 +37,19 @@ const ArticleBlogSection = ({ articles }) => {
                 </figure>
                 <div className="post-data mt-30">
                   <div className="post-date opacity-75 text-uppercase">
-                    {article.date}
+                    {blogs.blog_date}
                   </div>
-                  <a href="blog-details.html" className="mt-10 mb-15">
+                  <a href="blog-details" className="mt-10 mb-15">
                     <h4 className="tran3s blog-title fw-normal tx-dark">
-                      {article.title}
+                      {blogs.blog_header}
                     </h4>
                   </a>
                   <div>
                     <a
-                      href="blog-details.html"
+                      href="blog-details"
                       className="read-btn-two fw-500 tran3s"
                     >
-                      Read More
+                      {blogs.button_name}
                     </a>
                   </div>
                 </div>
