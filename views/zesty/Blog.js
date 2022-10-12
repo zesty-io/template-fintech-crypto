@@ -31,15 +31,22 @@
   * Images API: https://zesty.org/services/media-storage-micro-dam/on-the-fly-media-optimization-and-dynamic-image-manipulation
   */
  
- import React  from 'react';
+ import FeatureSection from 'components/Blog/FeatureSection';
+ import BlogSection from 'components/Blog/BlogSection';
+
+ 
+import React  from 'react';
  
  function Blog({ content }) {
      return (
          <>
-             {/* Zesty.io Output Example and accessible JSON object for this component. Delete or comment out when needed.  */}
-             <h1 dangerouslySetInnerHTML={{__html:content.meta.web.seo_meta_title}}></h1>
-             <div>{content.meta.web.seo_meta_description}</div>
-             {/* End of Zesty.io output example */}
+            <div className="main-page-wrapper">
+             <FeatureSection content={content}/>
+             <BlogSection content={content}/>
+           
+           
+
+             </div>
          </>
      );
  }

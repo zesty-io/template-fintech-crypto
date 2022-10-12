@@ -30,14 +30,14 @@ const FeatureSection = (content) => {
                       component: 'p',
                       props: {
                         className:
-                          'text-lg text-white opacity-75 pt-20 pb-30 lg-pb-20',
+                          "text-lg text-white opacity-75 pt-20 pb-30 lg-pb-20",
                       },
                     },
                     ul: {
                       component: 'ul',
                       props: {
                         className:
-                          'style-none list-item fs-18 text-white opacity-75',
+                          "style-none list-item fs-18 text-white opacity-75",
                       },
                     },
                   }}
