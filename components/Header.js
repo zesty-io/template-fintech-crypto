@@ -3,11 +3,13 @@
  * This file is used in [...slug.js] for example. It is not necceary and may be deleted or modified as needed.
  *
  */
- 
-
+import { useRouter } from 'next/router';
 
 function Header() {
+  const router = useRouter();
+  const isHomePage = router.pathname === '/';
 
+  console.log(isHomePage);
   return (
     <>
       <header className="theme-main-menu sticky-menu theme-menu-eleven white-vr">
@@ -22,14 +24,25 @@ function Header() {
             <div className="right-widget d-flex align-items-center ms-auto ms-lg-0 order-lg-3">
               <a
                 href="signin.html"
-                className="login-btn-two fw-500 d-flex align-items-center me-3 me-xl-5"
+                className={
+                  !isHomePage
+                    ? 'login-btn-two text-dark fw-bold fw-500 d-flex align-items-center me-3 me-xl-5'
+                    : 'login-btn-two fw-500 d-flex align-items-center me-3 me-xl-5'
+                }
               >
                 <img src="images/icon/icon_20.svg" alt="" className="me-2" />
                 <span>login</span>
               </a>
               <a
-                href="contact-us.html"
-                className="start-btn-two fw-500 position-relative d-none d-lg-block"
+                href="#"
+                style={{
+                  background:
+                    !isHomePage &&
+                    'linear-gradient(-90deg, #ff7df2 0%, #ff275b 100%)',
+                }}
+                className={
+                  'start-btn-two fw-500 position-relative d-none d-lg-block'
+                }
               >
                 Get Started
               </a>
@@ -58,7 +71,9 @@ function Header() {
                   </li>
                   <li className="nav-item active dropdown">
                     <a
-                      className="nav-link"
+                      className={
+                        !isHomePage ? 'fw-bold text-dark nav-link' : 'nav-link'
+                      }
                       href="#"
                       role="button"
                       data-bs-toggle="dropdown"
@@ -67,11 +82,12 @@ function Header() {
                     >
                       Product
                     </a>
-                    
                   </li>
                   <li className="nav-item dropdown mega-dropdown-md">
                     <a
-                      className="nav-link"
+                      className={
+                        !isHomePage ? 'fw-bold text-dark nav-link' : 'nav-link'
+                      }
                       href="blog"
                       role="button"
                       data-bs-toggle="dropdown"
@@ -80,11 +96,12 @@ function Header() {
                     >
                       Blog
                     </a>
-                    
                   </li>
                   <li className="nav-item dropdown">
                     <a
-                      className="nav-link"
+                      className={
+                        !isHomePage ? 'fw-bold text-dark nav-link' : 'nav-link'
+                      }
                       href="#"
                       role="button"
                       data-bs-toggle="dropdown"
@@ -93,9 +110,7 @@ function Header() {
                     >
                       Portfolio
                     </a>
-              
                   </li>
-                  
                 </ul>
 
                 <div className="mobile-content d-block d-lg-none">
