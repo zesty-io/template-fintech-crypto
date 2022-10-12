@@ -3,8 +3,11 @@
  * This file is used in [...slug.js] for example. It is not necceary and may be deleted or modified as needed.
  *
  */
+ 
+
 
 function Header() {
+
   return (
     <>
       <header className="theme-main-menu sticky-menu theme-menu-eleven white-vr">
@@ -69,7 +72,7 @@ function Header() {
                   <li className="nav-item dropdown mega-dropdown-md">
                     <a
                       className="nav-link"
-                      href="#"
+                      href="blog"
                       role="button"
                       data-bs-toggle="dropdown"
                       data-bs-auto-close="outside"
