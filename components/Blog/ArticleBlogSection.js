@@ -4,7 +4,7 @@
 
 
 
-const ArticleBlogSection = ({ blogItems }) => {
+const ArticleBlogSection = ({ articles }) => {
   //   const [articles, setArticles] = useState([]);
   //   async function fetchData(url) {
   //     console.log('fetching data from: ', url);
@@ -20,7 +20,7 @@ const ArticleBlogSection = ({ blogItems }) => {
 
   return (
     <>
-      {blogItems.map((blogs, index) => {
+      {articles.map((article, index) => {
         return (
           <div className="row" key={index}>
             <div className="col-md-6">
@@ -28,7 +28,7 @@ const ArticleBlogSection = ({ blogItems }) => {
                 <figure className="post-img m0">
                   <a href="#" className="w-100 d-block">
                     <img
-                      src={blogs.blog_image.data[0].url}
+                      src={article.image.data[0].url}
                       data-src="images/blog/blog_img_20.jpg"
                       alt=""
                       className="lazy-img w-100 tran4s"
@@ -37,11 +37,11 @@ const ArticleBlogSection = ({ blogItems }) => {
                 </figure>
                 <div className="post-data mt-30">
                   <div className="post-date opacity-75 text-uppercase">
-                    {blogs.blog_date}
+                    {article.date}
                   </div>
                   <a href="blog-details" className="mt-10 mb-15">
                     <h4 className="tran3s blog-title fw-normal tx-dark">
-                      {blogs.blog_header}
+                      {article.title}
                     </h4>
                   </a>
                   <div>
@@ -49,7 +49,7 @@ const ArticleBlogSection = ({ blogItems }) => {
                       href="blog-details"
                       className="read-btn-two fw-500 tran3s"
                     >
-                      {blogs.button_name}
+                      Read more
                     </a>
                   </div>
                 </div>

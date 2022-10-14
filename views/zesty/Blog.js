@@ -37,7 +37,6 @@ import BlogSection from 'components/Blog/BlogSection';
 import React from 'react';
 
 function Blog({ content }) {
-console.log(content)
 
   return (
     <>
