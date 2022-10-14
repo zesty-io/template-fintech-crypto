@@ -9,7 +9,6 @@ function Header() {
   const router = useRouter();
   const isHomePage = router.pathname === '/';
 
-  console.log(isHomePage);
   return (
     <>
       <header className="theme-main-menu sticky-menu theme-menu-eleven white-vr">

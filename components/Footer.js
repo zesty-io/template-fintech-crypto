@@ -4,6 +4,7 @@
  *
  */
 
+ import { useRouter } from 'next/router';
 function Footer() {
   return <>
 		<div className="footer-style-eight theme-basic-footer">
