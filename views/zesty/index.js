@@ -28,9 +28,7 @@ import NavBar from './NavBar';
 import Icon from './Icon';
 import FooterItem from './FooterItem';
 import Footer from './Footer';
-import BlogItem from './BlogItem';
-import RecentNew from './RecentNew';
  
  export {
-   Clipping, Widget, Homepage, SimplePage, SidebarContactForm, Blog, Article, HomepageTile, Category, Author, Tag, CtaCard, SignUpStep, ValueProp, CompanyStatistic, ServicesPage, Testimonial, Faq, SocialMedia, ServicesCard, ContactPage, NavBarItem, NavBar, Icon, FooterItem, Footer, BlogItem, RecentNew
+   Clipping, Widget, Homepage, SimplePage, SidebarContactForm, Blog, Article, HomepageTile, Category, Author, Tag, CtaCard, SignUpStep, ValueProp, CompanyStatistic, ServicesPage, Testimonial, Faq, SocialMedia, ServicesCard, ContactPage, NavBarItem, NavBar, Icon, FooterItem, Footer
  }

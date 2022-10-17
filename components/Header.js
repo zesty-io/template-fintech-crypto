@@ -4,11 +4,36 @@
  *
  */
 import { useRouter } from 'next/router';
+const fetch = require('node-fetch');
+const configs = require('../zesty.config.json');
+import { React, useState, useEffect } from 'react';
 
 function Header() {
   const router = useRouter();
   const isHomePage = router.pathname === '/';
+  const stageURL = configs.stage;
 
+
+
+  console.log(process.env.PRODUCTION);
+
+  const [navs, setNavs] = useState([]);
+
+    async function fetchData(url) {
+      console.log('fetching data from: ', url);
+      let res = await fetch(url);
+      let data = await res.json();
+      console.log(data)
+      setNavs(data);
+    }
+
+    useEffect(() => {
+          // fetch request
+          let data = fetchData(`${stageURL}/nav-bar.json?zpw=e36863`);
+        }, []);
+
+
+    
   return (
     <>
       <header className="theme-main-menu sticky-menu theme-menu-eleven white-vr">
