@@ -2,8 +2,6 @@
 // const configs = require('../../zesty.config.json');
 // import { React, useState, useEffect } from 'react';
 
-
-
 const ArticleBlogSection = ({ articles }) => {
   //   const [articles, setArticles] = useState([]);
   //   async function fetchData(url) {

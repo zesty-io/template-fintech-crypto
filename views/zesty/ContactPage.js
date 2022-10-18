@@ -30,14 +30,14 @@
   */
  
  import React  from 'react';
+ import ContactBanner from 'components/Contact/ContactBanner';
  
  function ContactPage({ content }) {
      return (
          <>
-             {/* Zesty.io Output Example and accessible JSON object for this component. Delete or comment out when needed.  */}
-             <h1 dangerouslySetInnerHTML={{__html:content.meta.web.seo_meta_title}}></h1>
-             <div>{content.meta.web.seo_meta_description}</div>
-             {/* End of Zesty.io output example */}
+           
+            <ContactBanner content={content}/>
+            
          </>
      );
  }
