@@ -4,36 +4,11 @@
  *
  */
 import { useRouter } from 'next/router';
-const fetch = require('node-fetch');
-const configs = require('../zesty.config.json');
-import { React, useState, useEffect } from 'react';
 
 function Header() {
   const router = useRouter();
   const isHomePage = router.pathname === '/';
-  const stageURL = configs.stage;
 
-
-
-  console.log(process.env.PRODUCTION);
-
-  const [navs, setNavs] = useState([]);
-
-    async function fetchData(url) {
-      console.log('fetching data from: ', url);
-      let res = await fetch(url);
-      let data = await res.json();
-      console.log(data)
-      setNavs(data);
-    }
-
-    useEffect(() => {
-          // fetch request
-          let data = fetchData(`${stageURL}/nav-bar.json?zpw=e36863`);
-        }, []);
-
-
-    
   return (
     <>
       <header className="theme-main-menu sticky-menu theme-menu-eleven white-vr">
@@ -88,7 +63,7 @@ function Header() {
                 <ul className="navbar-nav">
                   <li className="d-block d-lg-none">
                     <div className="logo">
-                      <a href="index.html" className="d-block">
+                      <a href="/" className="d-block">
                         <img src="images/logo/logo_05.png" alt="" width="95" />
                       </a>
                     </div>
@@ -98,7 +73,21 @@ function Header() {
                       className={
                         !isHomePage ? 'fw-bold text-dark nav-link' : 'nav-link'
                       }
-                      href="#"
+                      href="/"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      data-bs-auto-close="outside"
+                      aria-expanded="false"
+                    >
+                      Home
+                    </a>
+                  </li>
+                  <li className="nav-item active dropdown">
+                    <a
+                      className={
+                        !isHomePage ? 'fw-bold text-dark nav-link' : 'nav-link'
+                      }
+                      href="/our-services/"
                       role="button"
                       data-bs-toggle="dropdown"
                       data-bs-auto-close="outside"
@@ -112,7 +101,7 @@ function Header() {
                       className={
                         !isHomePage ? 'fw-bold text-dark nav-link' : 'nav-link'
                       }
-                      href="blog"
+                      href="/blog/"
                       role="button"
                       data-bs-toggle="dropdown"
                       data-bs-auto-close="outside"
@@ -126,13 +115,13 @@ function Header() {
                       className={
                         !isHomePage ? 'fw-bold text-dark nav-link' : 'nav-link'
                       }
-                      href="#"
+                      href="/contact-us/"
                       role="button"
                       data-bs-toggle="dropdown"
                       data-bs-auto-close="outside"
                       aria-expanded="false"
                     >
-                      Portfolio
+                      Contact
                     </a>
                   </li>
                 </ul>
