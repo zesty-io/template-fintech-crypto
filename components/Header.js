@@ -13,27 +13,37 @@ function Header() {
   const isHomePage = router.pathname === '/';
   const stageURL = configs.stage;
 
-
-
   console.log(process.env.PRODUCTION);
 
   const [navs, setNavs] = useState([]);
 
-    async function fetchData(url) {
-      console.log('fetching data from: ', url);
-      let res = await fetch(url);
-      let data = await res.json();
-      console.log(data)
-      setNavs(data);
-    }
+  // async function fetchData(url) {
+  //   // console.log('fetching data from: ', url);
+  //   // let res = await fetch(url, { method: 'GET', mode: 'no-cors' });
+  //   // let data = await res.json();
+  //   // console.log(data);
+  //   // setNavs(data);
 
-    useEffect(() => {
-          // fetch request
-          let data = fetchData(`${stageURL}/nav-bar.json?zpw=e36863`);
-        }, []);
+  //   try {
+  //     let res = await fetch(url, {
+  //       method: 'GET',
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //       },
+  //     });
+  //     return await res.json();
+  //   } catch (error) {
+  //     throw new Error(`HTTP error: ${error}`);
+  //   }
+  // }
 
+  // useEffect(() => {
+  //   // fetch request
+  //   let data = fetchData(
+  //     `https://7z8qfp6r-dev.webengine.zesty.io/nav-bar/?toJSON`,
+  //   );
+  // }, []);
 
-    
   return (
     <>
       <header className="theme-main-menu sticky-menu theme-menu-eleven white-vr">

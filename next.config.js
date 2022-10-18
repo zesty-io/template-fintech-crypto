@@ -6,12 +6,12 @@ const zestyConfig = require('./zesty.config.json');
 module.exports = {
   trailingSlash: true,
   eslint: {
-    ignoreDuringBuilds: true
+    ignoreDuringBuilds: true,
   },
   async redirects() {
-    return await fetchZestyRedirects()
-  }, 
+    return await fetchZestyRedirects();
+  },
   env: {
-      zesty: zestyConfig
-  }
-}
+    zesty: zestyConfig,
+  },
+};
