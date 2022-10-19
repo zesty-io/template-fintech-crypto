@@ -1,19 +1,5 @@
-const FeatureSection = (content) => {
-  const mainContext1 = content.content.homepage_tiles.data[0].main_text;
-  const mainContext1__description = content.content.homepage_tiles.data[0].description;
-  const mainContext1__img = content.content.homepage_tiles.data[0].main_image.data[0].url;
-
-  const mainContext2 = content.content.homepage_tiles.data[1].main_text;
-  const mainContext2__description = content.content.homepage_tiles.data[1].description;
-  const mainContext2__img = content.content.homepage_tiles.data[1].main_image.data[0].url;
-
-  const mainContext3 = content.content.homepage_tiles.data[2].main_text;
-  const mainContext3__description = content.content.homepage_tiles.data[2].description;
-  const mainContext3__img = content.content.homepage_tiles.data[2].main_image.data[0].url;
-
-  const zuid = content.content.homepage_tiles.data[0].main_image.data[0].zuid;
-
-  console.log(zuid);
+const HomeTiles = ({ content }) => {
+  const newContent = content || '';
 
   return (
     <div className="fancy-feature-twentySix position-relative zn2 pt-150 lg-pt-80">
@@ -150,46 +136,55 @@ const FeatureSection = (content) => {
         </div>
 
         <div className="row gx-xxl-5">
-          <div className="col-lg-4 col-md-6">
-            <div className="card-style-twelve text-center position-relative mt-40 wow fadeInUp">
-              <div className="icon d-flex align-items-center justify-content-center">
-                <img
-                  src={mainContext1__img}
-                  data-src="images/icon/icon_78.png"
-                  alt=""
-                  className="lazy-img"
-                />
+          {[...newContent].map((tiles, i) => {
+            console.log([...newContent]);
+            return (
+              <div className="col-lg-4 col-md-6" key={i}>
+                <div className="card-style-twelve text-center position-relative mt-40 wow fadeInUp">
+                  <div className="icon d-flex align-items-center justify-content-center">
+                    <img
+                      src={tiles.content.main_image.data[0].url} //mainContext1__img
+                      data-src="images/icon/icon_78.png"
+                      alt=""
+                      className="lazy-img"
+                    />
+                  </div>
+
+                  <h4 className="text-white mb-10 mt-25">
+                    {tiles.content.main_text /*mainContext1*/}{' '}
+                  </h4>
+                  <p className="text-white opacity-75 mb-25">
+                    {tiles.content.description /*mainContext1__description*/}
+                  </p>
+                  <a href="#" className="arrow tran3s">
+                    <img
+                      src="images/lazy.svg"
+                      data-src="images/icon/icon_80.svg"
+                      alt=""
+                      className="lazy-img"
+                    />
+                  </a>
+                </div>
               </div>
-              <h4 className="text-white mb-10 mt-25">{mainContext1}</h4>
-              <p className="text-white opacity-75 mb-25">
-                {mainContext1__description}
-              </p>
-              <a href="#" className="arrow tran3s">
-                <img
-                  src="images/lazy.svg"
-                  data-src="images/icon/icon_80.svg"
-                  alt=""
-                  className="lazy-img"
-                />
-              </a>
-            </div>
-          </div>
-          <div className="col-lg-4 col-md-6">
+            );
+          })}
+
+          {/* <div className="col-lg-4 col-md-6">
             <div
               className="card-style-twelve text-center position-relative mt-40 active wow fadeInUp"
               data-wow-delay="0.2s"
             >
               <div className="icon d-flex align-items-center justify-content-center">
                 <img
-                  src={mainContext2__img}
+                  src={'' }
                   data-src="images/icon/icon_79.png"
                   alt=""
                   className="lazy-img"
                 />
               </div>
-              <h4 className="text-white mb-10 mt-25">{mainContext2}</h4>
+              <h4 className="text-white mb-10 mt-25">{'' }</h4>
               <p className="text-white opacity-75 mb-25">
-               {mainContext2__description}
+                {'' }
               </p>
               <a href="#" className="arrow tran3s">
                 <img
@@ -208,15 +203,15 @@ const FeatureSection = (content) => {
             >
               <div className="icon d-flex align-items-center justify-content-center">
                 <img
-                  src={mainContext3__img}
+                  src={'' }
                   data-src="images/icon/icon_81.png"
                   alt=""
                   className="lazy-img"
                 />
               </div>
-              <h4 className="text-white mb-10 mt-25">{mainContext3}</h4>
+              <h4 className="text-white mb-10 mt-25">{'' }</h4>
               <p className="text-white opacity-75 mb-25">
-                {mainContext3__description}
+                {'' }
               </p>
               <a href="#" className="arrow tran3s">
                 <img
@@ -227,7 +222,7 @@ const FeatureSection = (content) => {
                 />
               </a>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="shapes shape-one rounded-circle"></div>
@@ -236,4 +231,4 @@ const FeatureSection = (content) => {
   );
 };
 
-export default FeatureSection;
+export default HomeTiles;

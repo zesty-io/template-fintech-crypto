@@ -8,7 +8,7 @@ const useFetch = (url, production = true) => {
   let zestyURL = production
     ? process.env.zesty.production
     : process.env.zesty.stage;
-
+    console.log('zestyURL is '+production)
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch(`${zestyURL}${url}`);
